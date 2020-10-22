@@ -1,0 +1,258 @@
+
+// TYPOGRAPHY
+
+body {
+  font-family: $system-font-stack;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+blockquote {
+  font-family: $system-font-stack-serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $system-font-stack-serif;
+	color: $brand-medium-gray;
+	line-height:1.25;
+}
+
+h1 {
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0 0 30px;
+}
+
+h2 {
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0 0 30px;
+	color: $brand-dark-gray;
+	letter-spacing: -0.5px;
+	line-height: 1.2;
+}
+
+#hero-feature h2 {
+	font-size: 56px;
+}
+
+h3 {
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0 0 30px;
+}
+
+h4 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0 0 30px;
+}
+
+h5 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  margin: 0 0 20px;
+	text-transform: uppercase;
+	font-family: $system-font-stack;
+	letter-spacing: 0.45px;
+}
+
+h6{
+	font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0 0 0 0;
+	color: $brand-light-gray;
+	font-family: $system-font-stack;
+	letter-spacing: 0.5px;
+}
+
+p {
+  margin: 0 0 $padding;
+	color: $brand-medium-gray;
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 1.7;
+}
+
+.marginless {
+	margin: 0 !important;
+}
+
+.paddingless {
+	padding: 0 !important;
+}
+
+ul, ol {
+  margin: 0 0 $padding;
+	color: $brand-medium-gray;
+	font-size: 17px;
+	font-weight: 300;
+	line-height: 1.7;
+	padding-top: 0;
+}
+
+ul li, ol li{
+	margin-bottom: 12px;
+}
+
+p a, h2 a, h3 a, h4 a, h5 a {
+
+	text-decoration: none;
+	color: inherit;
+	border-bottom: 1px solid $brand-yellow;
+	-webkit-transition: all 0.15s ease-out;
+  transition: all 0.15s  ease-out;
+
+  &:hover,
+  &:focus {
+		color: $brand-yellow;
+    text-decoration: none;
+  }
+}
+
+p a {
+
+	color: $brand-yellow;
+	border-bottom: 1px solid $brand-yellow;
+
+	&:hover,
+	&:focus {
+		color: darken($brand-yellow, 10);
+		border-bottom: 1px solid darken($brand-yellow, 10);
+	}
+
+}
+
+.small{
+	font-size: 13px !important;
+	letter-spacing: 0.15px;
+	font-weight: 400;
+	color: #888888;
+}
+
+.tiny{
+	font-size: 11px !important;
+	letter-spacing: 0.15px;
+	font-weight: 400;
+	color: #888888;
+}
+
+
+.white{
+	color: #ffffff;
+}
+
+.white a{
+	color: #ffffff !important;
+	border-bottom: 1px solid #ffffff;
+}
+
+.arrowed{
+	position: relative;
+	display: inline-block;
+}
+
+.arrowed:after{
+	content: "\f105";
+	font-family: FontAwesome;
+	text-decoration: inherit;
+	color: inherit;
+	font-size: 24px;
+	position: absolute;
+	top: -7px;
+	right: -20px;
+}
+
+// RESPONSIVE STYLES IF NEEDED
+
+@include responsive($big-break) {
+
+	h1 {
+	  font-size: 54px;
+	}
+
+	#hero-feature h2 {
+		margin-top: 60px !important;
+		font-size: 46px;
+	}
+
+	h2 {
+	  font-size: 30px;
+	}
+
+
+}
+
+@include responsive($small-break) {
+
+	h1 {
+	  font-size: 48px;
+	  margin: 0 0 25px;
+	}
+
+	h2 {
+	  font-size: 30px;
+	  margin: 0 0 30px;
+		letter-spacing: -0.5px;
+		line-height: 1.2;
+	}
+
+	#hero-feature h2 {
+		font-size: 32px;
+		margin-top: 20px !important;
+	}
+
+	#message h2 {
+		font-size: 22px;
+	}
+
+	h3 {
+	  font-size: 24px;
+	  margin: 0 0 25px;
+	}
+
+	h4 {
+	  font-size: 16px;
+	  margin: 0 0 25px;
+	}
+
+	h5 {
+	  font-size: 13px;
+	  margin: 0 0 20px;
+		letter-spacing: 0.66px;
+	}
+
+	h6{
+		font-size: 13px;
+	  margin: 0 0 0 0;
+		letter-spacing: 0.5px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+
+}
+
+
+@include responsive($tiny-break) {
+
+	#hero-feature h2 {
+		font-size: 26px;
+		margin-top: 0 !important;
+	}
+
+}

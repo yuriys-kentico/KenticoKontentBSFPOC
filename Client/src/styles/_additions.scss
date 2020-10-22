@@ -1,0 +1,621 @@
+@import 'components/mixins';
+@import 'components/variables';
+
+/*=============================================
+=            Table of Contents               =
+=============================================*/
+/*--- 1).  Site wide  				   --------*/
+/*--- 2).  Home page  				   --------*/
+/*--- 3).  Map Page Search Results     --------*/
+/*--- 4).  Classes and programs        --------*/
+/*=====  End Table of Contents         ========*/
+
+/*=================================
+= 1).        Site Wide            =
+=================================*/
+body {
+  @include body();
+}
+
+.clear-fix {
+  clear: both;
+  overflow: hidden;
+  &:after {
+    clear: both;
+  }
+}
+
+#goodbye {
+  @media all and (max-width: 374px) and (min-width: 319px) {
+    min-height: 300px;
+  }
+}
+
+#copyright {
+  .padding {
+    @media all and (max-width: 374px) and (min-width: 319px) {
+      padding: 15px 0 0 0;
+    }
+  }
+}
+
+header {
+  box-shadow: 0px 4px 9px -3px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  #menu-icon {
+    font-weight: 300 !important;
+    width: 30px;
+    height: 30px;
+    &:before {
+      content: '';
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+#copy {
+  @media all and (max-width: 699px) and (min-width: 374px) {
+    position: relative;
+    margin-top: 35px !important;
+    top: 80px;
+    font-size: 0.8em;
+  }
+}
+
+.button {
+  font-weight: bold;
+  background: $bsf-yellow;
+  border-radius: 5px;
+  padding: 4.8px 16px;
+  border-width: 0px !important;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.47);
+  font-size: 16px;
+  padding: 0.3em 1em;
+  line-height: 1.7em !important;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-bottom: 7px;
+  &.result-btn {
+    width: inherit;
+    height: inherit;
+    padding: 5px 10px;
+    font-weight: normal;
+  }
+  &:active,
+  &:visited {
+    color: #fff !important;
+  }
+  &.btn-sm {
+    font-size: 0.8em;
+    display: inline-block;
+    padding: 5px 7px;
+  }
+  &.btn-default {
+    background: $bsf-gray;
+    &:hover {
+      background: darken($bsf-gray, 15%);
+    }
+  }
+  &.hero-btn {
+    background: transparent;
+    box-shadow: none !important;
+    color: #fff;
+    border-radius: 15px;
+    border: 1px solid #fff !important;
+  }
+}
+.banner {
+  padding: 10px 0;
+  background-image: linear-gradient(180deg, #ffffff 85%, #d3d3d3 100%) !important;
+  p {
+    margin: 0;
+    text-align: center;
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+    }
+  }
+}
+
+/*=============================================
+= 2).           Home Page                     =
+=============================================*/
+
+#hero-feature {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1440px;
+  height: inherit;
+  /*background-image: url(https://s3-us-west-1.amazonaws.com/bsfinternational/BSF-Homepage_Banner.jpg?mtime=20200520152736);*/
+  background-position: 50%;
+  background-size: 100%;
+  background-size: cover;
+  padding: 30px 0 30px 0;
+  overflow: hidden;
+  &.page-feature {
+    height: 400px;
+    @media all and (max-width: 812px) and (min-width: 319px) {
+      height: 250px;
+    }
+  }
+  &:after {
+    clear: both;
+    content: '';
+  }
+  .hero-callout {
+    margin-top: 25%;
+    @media all and (max-width: 568px) and (min-width: 319px) {
+      //margin-top: 150px;
+      //margin-bottom: 25px;
+      margin-top: 45%;
+    }
+    @media all and (max-width: 667px) and (min-width: 568px) {
+      //margin-top: 150px;
+      //margin-bottom: 25px;
+      margin-top: 35%;
+    }
+    .hero-btn {
+      @media all and (max-width: 374px) and (min-width: 319px) {
+        font-size: 0.8em;
+        width: inherit;
+      }
+      @supports (-webkit-touch-callout: none) {
+        margin-top: 20px !important;
+        font-size: 0.8em !important;
+        width: inherit !important;
+      }
+    }
+  }
+}
+
+.card-group {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 55px;
+  max-width: 960px;
+  @media all and (max-width: 768px) and (min-width: 320px) {
+    margin-bottom: 0;
+  }
+}
+.card {
+  box-shadow: 0px 2px 48px -19px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 20px;
+  border-radius: 23px;
+  margin: 25px 20px;
+  p {
+    margin: 0;
+  }
+  @media all and (max-width: 1024px) and (min-width: 375px) {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+  @media all and (max-width: 374px) and (min-width: 319px) {
+    margin-left: 0;
+    margin-right: 0;
+    &.span11 {
+      width: 100%;
+    }
+  }
+  .card-img-wrapper {
+    width: 60%;
+    display: inline-block;
+    .card-img {
+      display: block;
+      margin: auto;
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+  }
+  h4 {
+    font-size: 2.1em;
+    color: #333;
+    font-weight: normal;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+  .interact {
+    margin: 25px 0;
+  }
+}
+.callout {
+  margin: 0 auto;
+  h2 {
+    font-size: 42px;
+    padding: 25px 0;
+    margin: 15px 0;
+    display: block;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+      font-size: 30px;
+    }
+  }
+}
+
+.image-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  .video-wrapper {
+    text-align: center;
+    background-position: 50%;
+    background-size: 100%;
+    background-size: cover;
+    width: 70%;
+    @media all and (max-width: 667px) and (min-width: 320px) {
+      width: 90%;
+    }
+    a {
+      display: block;
+      padding: 20%;
+      @media all and (max-width: 667px) and (min-width: 320px) {
+        padding: 15% 20%;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+  .video-play-new {
+    margin: 0 auto;
+    display: inline-block;
+    transition: all 0.15s ease-out;
+    z-index: 99;
+    pointer-events: none;
+
+    @media all and (width: 414px) {
+    }
+    @media all and (max-width: 789px) and (min-width: 667px) {
+    }
+  }
+  .video-icon {
+    filter: invert(97%) sepia(0%) saturate(7489%) hue-rotate(77deg) brightness(97%) contrast(104%);
+    width: 96px;
+    height: 96px;
+    z-index: 999;
+    margin: auto;
+  }
+}
+
+#goodbye {
+  overflow: hidden;
+}
+
+#learn-wrapper {
+  padding: 0 20px;
+}
+
+/*===============================================
+= 3).        Map Page Search Results            =
+===============================================*/
+.search-main {
+  @media all and (max-width: 1024px) and (min-width: 319px) {
+    overflow: scroll;
+  }
+  @supports (-webkit-touch-callout: none) {
+    overflow: scroll;
+  }
+}
+
+#no-results {
+  @supports (-webkit-touch-callout: none) {
+    padding-top: 75px;
+  }
+}
+
+#filters {
+  .resets {
+    .filter-toggle {
+      @include filterToggle();
+      &.active {
+        border-color: $light-blue;
+        background: #fff;
+        color: #333 !important;
+        border-color: #fff;
+      }
+    }
+    .result-count {
+      display: inline-block;
+      padding: 5px 10px !important;
+      height: 25px !important;
+      line-height: 3 !important;
+    }
+  }
+}
+
+.more-options-wrapper {
+  padding: 10px;
+  background: #fafbfa;
+  display: none;
+  h5 {
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: -15px;
+  }
+  .span12 {
+    padding: 3px;
+    p {
+      @supports (-webkit-touch-callout: none) {
+        padding: 0 5px;
+      }
+    }
+    @media all and (max-width: 768px) and (min-width: 319px) {
+      display: inline-block;
+      position: relative;
+      float: left;
+      width: 50%;
+      padding: 0;
+    }
+    .result-img,
+    .result-img-2 {
+      width: 100%;
+      text-align: center;
+      //height: 130px;
+      @media all and (max-width: 1113px) and (min-width: 319px) {
+        //margin-bottom: 15px;
+      }
+      img {
+        height: 150px;
+        width: 150px;
+        /*@media all and (max-width: 735px) and (min-width: 319px) {
+					width: 90%;
+				}
+				@media all and (max-width: 736px) and (min-width: 667px) {
+					width: 60%;
+				}
+				@media all and (max-width: 1023px) and (min-width: 768px) {
+					width: 85%;
+				}*/
+      }
+    }
+    .result-img {
+      @media all and (max-width: 768px) and (min-width: 319px) {
+        //margin-bottom: 75px;
+      }
+    }
+    .result-img-2 {
+      //margin-bottom: 30px;
+      img {
+        position: relative;
+        top: 20px;
+      }
+    }
+  }
+  p {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.5;
+    @media all and (max-width: 768px) and (min-width: 319px) {
+      font-size: 0.8em;
+    }
+    @media all and (min-width: 768px) {
+      font-size: 0.9em;
+    }
+    .button {
+      font-weight: normal;
+    }
+    &.interact {
+      margin-top: 15px;
+    }
+  }
+}
+
+.map-cards {
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .card-group {
+    margin-bottom: 0;
+    .card {
+      max-width: 250px;
+      width: 100%;
+      padding: 10px 0 0 0;
+      margin-bottom: 0;
+      background: #fff;
+      p {
+        @media all and (max-width: 768px) and (min-width: 319px) {
+          font-size: 0.8em;
+        }
+        @media all and (max-width: 1024px) and (min-width: 768px) {
+          font-size: 0.8em;
+        }
+      }
+      @supports (-webkit-touch-callout: none) {
+        &:first-child {
+          .card-img {
+            position: relative !important;
+            top: -10px !important;
+          }
+        }
+      }
+      &:first-child {
+        .card-img {
+          position: relative;
+          top: -10px;
+        }
+      }
+      .interact {
+        margin-top: 10px;
+      }
+      &:first-child {
+        margin-left: 22%;
+        @media all and (max-width: 768px) and (min-width: 319px) {
+          margin: 15px auto;
+        }
+        @media all and (max-width: 1112px) and (min-width: 768px) {
+          margin: 15px auto;
+        }
+      }
+      @media all and (max-width: 1112px) and (min-width: 768px) {
+        margin: 15px auto;
+        width: 45%;
+      }
+      @media all and (max-width: 768px) and (min-width: 319px) {
+        margin: 15px auto;
+        width: 90%;
+      }
+      .card-img {
+        height: 130px;
+      }
+      .interact {
+        .button {
+          @media all and (max-width: 699px) and (min-width: 319px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.map-container {
+  #menu-icon {
+    @media all and (max-width: 767px) and (min-width: 319px) {
+      display: none !important;
+    }
+  }
+  #logo {
+    @media all and (max-width: 767px) and (min-width: 319px) {
+      display: none !important;
+    }
+  }
+  #mobile-logo {
+    @media all and (max-width: 767px) and (min-width: 319px) {
+      display: block !important;
+    }
+  }
+}
+
+.map-text {
+  @supports (-webkit-touch-callout: none) {
+    margin-top: 20px !important;
+  }
+  /*@supports not (-webkit-touch-callout: none) {
+	   CSS for other than iOS devices  
+	}*/
+  h3,
+  h5,
+  p {
+    margin: 0;
+  }
+  h3,
+  h5 {
+    margin-bottom: 5px;
+  }
+  p {
+    margin-bottom: 25px;
+  }
+}
+
+#search-results {
+  @media all and (max-width: 699px) and (min-width: 319px) {
+    margin-top: 40px !important;
+  }
+}
+
+.map {
+  padding-top: 50px;
+  @media all and (max-width: 699px) and (min-width: 319px) {
+    padding-top: 0;
+  }
+}
+
+.close-filter {
+  .filter-toggle {
+    @include filterToggle();
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  display: none;
+  @media all and (max-width: 767px) and (min-width: 319px) {
+    display: inherit;
+  }
+}
+
+.map {
+  .group {
+    @media all and (max-width: 699px) and (min-width: 319px) {
+      flex-direction: row-reverse !important;
+      flex-wrap: wrap-reverse !important;
+    }
+  }
+  .padding {
+    padding: 25px !important;
+  }
+}
+
+footer {
+  overflow: hidden;
+  @media all and (max-width: 699px) and (min-width: 319px) {
+  }
+  .container {
+    @media all and (max-width: 699px) and (min-width: 319px) {
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+}
+
+/*========================================
+= 4).        Classes/Programs            =
+========================================*/
+
+.ender-feature {
+  .copy {
+    padding: 5% 5% 1% 5%;
+  }
+}
+
+.actions {
+  a {
+    padding: 5px 10px;
+  }
+}
+
+.actions.join-mobile a {
+  margin-bottom: 7px !important;
+}
+
+/*========================================
+= 5).               Misc                 =
+========================================*/
+
+#hero-header-buffer {
+  @media all and (max-width: 768px) {
+    height: 90px !important;
+  }
+  @media all and (max-width: 414px) {
+    height: 120px !important;
+  }
+  @media all and (min-width: 375px) and (max-width: 413px) {
+    height: 140px !important;
+  }
+  @media all and (min-width: 320px) and (max-width: 374px) {
+    height: 170px !important;
+  }
+  &.class-page {
+    height: 0 !important;
+  }
+}
+
+#inline-email {
+  max-height: inherit !important;
+}
+
+.filter-wrapper {
+  overflow: scroll !important;
+}

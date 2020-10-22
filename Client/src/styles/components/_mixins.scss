@@ -1,0 +1,26 @@
+@mixin body() {
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	-webkit-font-feature-settings: "pnum";
+	font-feature-settings: "pnum";
+	font-variant-numeric: proportional-nums;
+	background: #FEFFFE;
+}
+
+@mixin btnShadow() {
+	box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.47);
+}
+
+@mixin filterToggle() {
+	border: 2px solid lighten($bsf-yellow, 20%);
+	background: rgba(lighten($bsf-yellow, 20%), .3);
+	border-radius: 50px;
+	margin: 10px 15px !important;
+	display: inline-block;
+	padding: 5px 10px !important;
+	height: 25px;
+	line-height: 1;
+	box-shadow: 1px 1px 1px 0 lighten($bsf-gray, 10%);
+}

@@ -1,0 +1,72 @@
+// // Reset default browser styles using Normalize
+// @import "../../modules/normalize/normalize.scss";
+
+// Install FontAwesome for useful icons
+@import 'modules/font-awesome/font-awesome.scss';
+
+// Import fonts from Google
+@import url(https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,600|Roboto:100,300,400,700);
+
+// Set variables and reusable mixins
+@import 'base/config';
+@import 'base/mixins';
+
+// Import typical layout styles
+@import 'base/grid';
+@import 'base/type';
+
+// Import reusable modules
+// @import 'components/media';
+// @import 'components/buttons';
+// @import 'components/tables';
+// @import 'components/forms';
+// @import 'components/alerts';
+@import 'components/nav';
+@import 'components/other';
+
+// Specific project styles, add any section specific sass modules here
+// @import 'pages/home';
+@import 'pages/layout';
+// @import 'pages/secondary';
+// @import 'pages/support';
+// @import 'pages/class';
+
+// Additional styles to think about
+@import 'base/responsive';
+@import 'base/print';
+
+// // If IE support is needed
+// @import 'base/ie';
+
+// // For anything quick and dirty that needs thrown in
+// @import 'base/shame';
+
+@import 'additions';
+
+/*! 
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,600|Roboto:100,300,400,700');
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('./fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+    url('./fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+    url('./fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+    url('./fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import 'loading';

@@ -1,0 +1,95 @@
+//**
+// 12 Column Responsive Grid
+//**
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0;
+	display:block;
+	z-index: 10;
+	position:relative;
+}
+
+.container.wide {
+  max-width: 1440px;
+}
+
+
+.span1, .span2, .span3, .span4, .span5, .span6,
+.span7, .span8, .span9, .span10, .span11, .span12,
+.span13, .span14, .span15, .span16, .span17, .span18,
+.span19, .span20, .span21, .span22, .span23, .span24 {
+	margin-bottom: 20px;
+}
+
+.group {
+  flex-direction: column;
+}
+
+
+@include responsive($container-break) {
+	.container {
+		width: 91.666%;
+	}
+}
+
+@include responsive($big-break) {
+	main .container {
+		width: 100%;
+	}
+}
+
+@include responsive($small-break) {
+	.mobile-hide {
+		display: none;
+	}
+	.break-mobile{
+		display:block;
+	}
+}
+
+// Grid columns are stacked until the display size is greater than min-width
+@include mobilefirst($small-break) {
+
+  $unit: 4.1666%; // Width of each grid column unit
+  $margin: 0%; // Margin between the grid columns
+
+  .container {
+    padding: 0;
+  }
+
+  .group {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -$margin;
+  }
+
+  .span1, .span2, .span3, .span4, .span5, .span6,
+  .span7, .span8, .span9, .span10, .span11, .span12,
+  .span13, .span14, .span15, .span16, .span17, .span18,
+  .span19, .span20, .span21, .span22, .span23, .span24 {
+    flex: 0 0 auto;
+		margin-bottom: 0;
+  }
+
+  @for $i from 1 through 24 {
+    .span#{$i} {
+      flex-basis: ($unit * $i) + ($margin * ($i - 1));
+      margin-left: $margin;
+      max-width: ($unit * $i) + ($margin * ($i - 1));
+    }
+
+    .offset#{$i} {
+      margin-left: ($unit * $i) + ($margin * ($i + 1)) !important;
+    }
+  }
+
+
+	.mobile-show {
+		display: none;
+	}
+
+}

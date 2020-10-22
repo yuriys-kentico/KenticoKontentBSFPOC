@@ -1,0 +1,12 @@
+{
+  "errors": {
+    "genericError": "A generic error has occurred.",
+    "genericStack": "No error information."
+  },
+  "shared": {
+    "pleaseRead": "Please read this: ",
+    "whatToDo": "What to do with the URL to this page",
+    "enterPreviewApiKey": "Please enter a Preview API key:"
+  },
+  "elements": {}
+}

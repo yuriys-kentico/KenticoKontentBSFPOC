@@ -1,0 +1,40 @@
+//**
+// Project Settings
+//**
+
+// Consistent settings
+$br: 2px; // Border-radius
+$btn-br: 2px; // Button border-radius
+$font-size: 100%; // Global default font size
+$padding: 40px; // Padding and margins
+$line-height: 44px; // Consistent height for buttons, inputs etc.
+$system-font-stack: Roboto, sans-serif; // System fonts
+$system-font-stack-serif: 'Cormorant Garamond', serif; // System fonts
+
+// Responsive breakpoints
+$tiny-break: 400px;
+$small-break: 767px;
+$big-break: 1023px;
+$container-break: 1280px;
+
+
+// Better default colors
+
+// Gray Scale
+$white:  #fff;
+$black:  #111;
+
+
+// Project color variables
+$brand-yellow:	#f7a800;
+$brand-dark-gray:  #4a4a4a;
+$brand-medium-gray: 	#5f6062;
+$brand-light-gray: 	#b2b2b2;
+$brand-orange:	#df4c2a;
+
+
+$danger-color: $white; // Bad color for errors, validation etc.
+$success-color: $white; // Good color for success etc.
+$info-color: $white; // Good color for success etc.
+$warning-color: $white; // Good color for success etc.
+$subtle-color: $white; // Subtle color for subtle text
