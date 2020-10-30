@@ -110,7 +110,7 @@ export const HomePage: RoutedFC = () => {
         <>
           {preview && (
             <main className={styles.root}>
-              {page.banner.value && (
+              {page.banner.value !== '<p><br></p>' && (
                 <div
                   className={styles.banner}
                   data-kontent-item-id={page.system.id}
